@@ -103,7 +103,7 @@ useEffect(()=>{
     <section className="timer_count">
       <Container>
         <Row>
-          <Col lg='6' md='6'>
+          <Col lg='6' md='12' className='count_down-col'>
             <div className="clock_top-content">
             <h4 className='text-white fs-6 mb-2'>Oferta de tiempo Limitado</h4>
             <h3 className='text-white fs-5 mb-3'>Silla con posa brazos</h3>
@@ -116,7 +116,7 @@ useEffect(()=>{
             </motion.button>
             
           </Col>
-          <Col lg='6' md='6' className='text-end'>
+          <Col lg='6' md='12' className='text-end counter_img'>
             <img src={counterImg} alt="" />
           </Col>
         </Row>
