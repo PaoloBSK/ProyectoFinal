@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Helmet from '../components/Helmet/Helmet'
 import { Container, Row, Col,Form, FormGroup } from 'reactstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { signInWithEmailAndPassword} from 'firebase/auth'
 import { auth } from '../firebase.config'
 import {toast} from 'react-toastify'
@@ -13,6 +13,7 @@ const Login = () => {
   const[email,setEmail] = useState('')
   const[password,setPassword] = useState('')
   const[loading, setLoading] = useState(false)
+  const navigate= useNavigate()
 
   const signIn = async (e) =>{
     e.preventDefault()
@@ -22,11 +23,14 @@ const Login = () => {
 
       const user = useCredential.user
 
-
+      setLoading(false)
+      toast.success('Se a iniciado sesion  correctamente')
+      navigate('/checkout')
 
     }catch(error){
       setLoading(false)
       toast.error(error.message)
+
     }
 
   }
@@ -36,9 +40,12 @@ const Login = () => {
       <section>
         <Container>
           <Row>
-            <Col lg='6' className='m-auto text-center'>
+            {
+              loading ? (<Col lg='12' className='text-center'><h5
+              className='fw-bold'>Cargando....</h5></Col>):(
+              <Col lg='6' className='m-auto text-center'>
               <h3 className='fw-bold mb-4'>LogIn</h3>
-              <Form className='auth_form'>
+              <Form className='auth_form' onSubmit={signIn}>
                 <FormGroup className='form_group'>
                   <input type="email" placeholder='Ingresa tu mail'  value={email} onChange={e=> setEmail(e.target.value)}/>
                 </FormGroup>
@@ -51,7 +58,9 @@ const Login = () => {
                   <Link to='/signup'>Crea Una cuenta ahora:</Link> </p>
               </Form>
 
-            </Col>
+            </Col>)
+            }
+            
           </Row>
         </Container>
       </section>
