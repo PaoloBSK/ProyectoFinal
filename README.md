@@ -35,6 +35,12 @@ npm start
 
 
 Integrantes:
+
+
+
+
+
+
 Javier André Soto Hernández 0219468
 
 
