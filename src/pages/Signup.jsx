@@ -111,7 +111,7 @@ const Signup = () => {
                   <input type="file" onChange={(e)=> setFile(e.target.files[0])}/>
                 </FormGroup>
 
-                <button type='submit' className="buy_btn auth_btn">Crear una Cuenta</button>
+                <button type='submit' className="buy_btnt auth_btn">Crear una Cuenta</button>
                   <p>ya tienes Cuenta?
                      <Link to='/login'>LogIn</Link>
                       </p>

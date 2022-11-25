@@ -22,7 +22,7 @@ const Login = () => {
       const useCredential = await signInWithEmailAndPassword(auth,email,password)
 
       const user = useCredential.user
-
+      console.log(user)
       setLoading(false)
       toast.success('Se a iniciado sesion  correctamente')
       navigate('/checkout')

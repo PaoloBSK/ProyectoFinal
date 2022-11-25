@@ -25,13 +25,13 @@ const Checkout = () => {
                 <input type="email" placeholder='Ingresa Tu Email'/>
               </FormGroup>
               <FormGroup className="form_group">
-                <input type="number" placeholder='Ingresa Tu direccion'/>
+                <input type="text" placeholder='Ingresa Tu direccion'/>
               </FormGroup>
               <FormGroup className="form_group">
                 <input type="text" placeholder='Ingresa Tu Nombre'/>
               </FormGroup>
               <FormGroup className="form_group">
-                <input type="text" placeholder='Ingresa Tu Codigo Postal'/>
+                <input type="number" placeholder='Ingresa Tu Codigo Postal'/>
               </FormGroup>
               <FormGroup className="form_group">
                 <input type="text" placeholder='Ingresa Tu Pais'/>
