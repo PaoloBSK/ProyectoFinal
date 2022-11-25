@@ -8,17 +8,13 @@ Se debe correr en la terminal
 
 
 npm install
+
+
+
+
+
+
 npm install react-toastify
-
-
-
-
-
-
-npm install firebase
-
-
-
 
 
 
